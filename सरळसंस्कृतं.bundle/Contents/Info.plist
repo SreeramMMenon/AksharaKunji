@@ -107,14 +107,14 @@
 		<key>TISIntendedLanguage</key>
 		<string>kn-IN</string>
 	</dict>
-	<key>KLInfo_സരളഗ്രന്ഥ</key>
+	<key>KLInfo_നാഗഗ്രന്ഥ</key>
 	<dict>
 		<key>TICapsLockLanguageSwitchCapable</key>
 		<false/>
 		<key>TISIconIsTemplate</key>
 		<false/>
 		<key>TISInputSourceID</key>
-		<string>org.sil.ukelele.keyboardlayout.ramakrutam.സരളഗ്രന്ഥ</string>
+		<string>org.sil.ukelele.keyboardlayout.ramakrutam.നാഗഗ്രന്ഥ</string>
 		<key>TISIntendedLanguage</key>
 		<string>ml-IN</string>
 	</dict>
