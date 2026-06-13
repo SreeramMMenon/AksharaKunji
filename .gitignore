@@ -3,3 +3,4 @@ git_push.sh
 # Folder to ignore
 Not-for-public/
 സ്വകാര്യം(അക്ഷരകുഞ്ജി)/
+.DS_Store
