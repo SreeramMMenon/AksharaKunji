@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>അക്ഷരകുഞ്ജി · AksharaKunji</title>
+<meta name="description" content="AksharaKunji — a macOS keyboard layout to type Malayalam, Sanskrit and 8 more Indic scripts phonetically on QWERTY, at the speed of thought.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23C0541C'/%3E%3Ctext x='32' y='46' font-size='42' text-anchor='middle' fill='white' font-family='sans-serif'%3E%E0%B4%95%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&family=Noto+Sans+Malayalam:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="lang-ml">
+
+<header>
+  <div class="hbar">
+    <a class="brand" href="#top"><span data-i18n="siteTitle">അക്ഷരകുഞ്ജി</span><small>AksharaKunji</small></a>
+    <div class="seg" role="group" aria-label="Language">
+      <button data-lang="ml" lang="ml" aria-pressed="true">മലയാളം</button>
+      <button data-lang="sa" lang="sa" aria-pressed="false">संस्कृतम्</button>
+      <button data-lang="en" aria-pressed="false">English</button>
+    </div>
+    <a class="ghlink" href="https://github.com/SreeramMMenon/AksharaKunji" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</header>
+
+<a id="top"></a>
+
+<section id="hero" class="wrap">
+  <h2 data-i18n="tagline">ചിന്തയുടെ വേഗത്തിൽ മലയാളവും സംസ്കൃതവും.</h2>
+  <p class="sub" data-i18n="heroSub"></p>
+  <div class="cta">
+    <a class="btn primary" href="#try" data-i18n="ctaTry">ഇവിടെ പരീക്ഷിക്കൂ</a>
+    <a class="btn ghost" href="#install" data-i18n="ctaInstall">മാക്കിൽ ഇൻസ്ഺളേഷൻ</a>
+    <a class="btn ghost" href="https://github.com/SreeramMMenon/AksharaKunji" target="_blank" rel="noopener" data-i18n="ctaGithub">GitHub-ൽ കാണൂ</a>
+  </div>
+  <div class="hstrip" aria-hidden="true">
+    <div id="hero-keys"><span class="hk">t</span><span class="hk">r</span><span class="hk">a</span><span class="hk">i</span></div>
+    <span class="harrow">→</span>
+    <div id="hero-out" lang="ml"></div>
+  </div>
+</section>
+
+<section id="why" class="wrap">
+  <h2 data-i18n="whyTitle">എന്തിന് അക്ഷരകുഞ്ജി?</h2>
+  <p data-i18n="whyP1"></p>
+  <p data-i18n="whyP2"></p>
+</section>
+
+<section id="features" class="wrap">
+  <div class="grid">
+    <div class="card"><h3 data-i18n="f1t"></h3><p data-i18n="f1b"></p></div>
+    <div class="card"><h3 data-i18n="f2t"></h3><p data-i18n="f2b"></p></div>
+    <div class="card"><h3 data-i18n="f3t"></h3><p data-i18n="f3b"></p></div>
+    <div class="card"><h3 data-i18n="f4t"></h3><p data-i18n="f4b"></p></div>
+    <div class="card"><h3 data-i18n="f5t"></h3><p data-i18n="f5b"></p></div>
+    <div class="card"><h3 data-i18n="f6t"></h3><p data-i18n="f6b"></p></div>
+    <div class="card"><h3 data-i18n="f7t"></h3><p data-i18n="f7b"></p></div>
+    <div class="card hl"><h3 data-i18n="f8t"></h3><p data-i18n="f8b"></p></div>
+    <div class="card"><h3 data-i18n="f9t"></h3><p data-i18n="f9b"></p></div>
+  </div>
+</section>
+
+<section id="try" class="wrap">
+  <h2 data-i18n="tryTitle">ഇവിടെ പരീക്ഷിക്കൂ</h2>
+  <p data-i18n="tryIntro"></p>
+  <div class="panel">
+    <div class="toolbar">
+      <label for="layoutSelect" data-i18n="layoutLabel">ലിപി:</label>
+      <select id="layoutSelect"></select>
+      <div class="mods">
+        <button class="modbtn" data-mod="shift" type="button">⇧ Shift</button>
+        <button class="modbtn" data-mod="option" type="button">⌥ Option</button>
+        <button class="modbtn" data-mod="caps" type="button">⇪ Caps</button>
+      </div>
+    </div>
+    <div id="typebox" tabindex="0" role="textbox" aria-multiline="true" aria-label="AksharaKunji demo input" class="empty"></div>
+    <div class="hintrow">
+      <p class="hint" data-i18n="pendingNote"></p>
+      <p class="hint" data-i18n="backspaceNote"></p>
+    </div>
+    <div class="samples">
+      <button id="clearBtn" type="button" data-i18n="clearLabel">മായ്ക്കുക</button>
+      <span class="lbl" data-i18n="samplesTitle">ഇവ ഞെക്കി നോക്കൂ:</span>
+      <span id="chips"></span>
+    </div>
+  </div>
+
+  <div class="kbscroll"><div id="keyboard"></div></div>
+  <div id="board">
+    <h3 data-i18n="boardTitle" style="margin-top:18px">കീ-വിന്യാസം</h3>
+    <p class="hint" data-i18n="boardLegend"></p>
+    <div class="legend">
+      <span><span class="sw dead"></span><span data-i18n="boardLegend2">പച്ച = മാറിക്കൊണ്ടിരിക്കുന്ന കീ</span></span>
+    </div>
+  </div>
+</section>
+
+<section id="tables" class="wrap">
+  <h2 data-i18n="tablesTitle">അക്ഷരപ്പട്ടിക</h2>
+  <p data-i18n="tablesNote"></p>
+  <div id="tables-wrap"></div>
+</section>
+
+<section id="install" class="wrap">
+  <h2 data-i18n="installTitle">മാക്കിൽ ഇൻസ്ഺളേഷൻ</h2>
+  <ol class="steps">
+    <li data-i18n="step1"></li>
+    <li data-i18n="step2"></li>
+    <li data-i18n="step3"></li>
+    <li data-i18n="step4"></li>
+  </ol>
+  <div class="dlrow">
+    <a class="btn primary" href="assets/AksharaKunji-bundle.zip" download data-i18n="downloadLabel">⬇ सरळसंस्कृतं.bundle (zip)</a>
+  </div>
+
+  <div class="subblock">
+    <h3 data-i18n="stickersTitle">കീബോർഡ് ഒട്ടിപ്പുകൾ</h3>
+    <p data-i18n="stickersBody"></p>
+    <div class="dlrow">
+      <a class="btn ghost" href="assets/sticker-full.pdf" target="_blank" rel="noopener" data-i18n="stickerFull">പൂർണരൂപം (PDF)</a>
+      <a class="btn ghost" href="assets/sticker-simple.pdf" target="_blank" rel="noopener" data-i18n="stickerSimple">സരളരൂപം (PDF)</a>
+    </div>
+  </div>
+
+  <div class="subblock">
+    <h3 data-i18n="extrasTitle">കൂടുതൽ സൗകര്യങ്ങൾ</h3>
+    <p data-i18n="extrasBody"></p>
+    <p><a href="https://github.com/SreeramMMenon/AksharaKunji/tree/main/Coding" target="_blank" rel="noopener">Hammerspoon / Karabiner-Elements ↗</a></p>
+    <p><small data-i18n="fontNote"></small></p>
+  </div>
+</section>
+
+<section id="roadmap" class="wrap">
+  <h2 data-i18n="roadmapTitle">ഇനി വരാനുള്ളത്</h2>
+  <p data-i18n="roadmapBody"></p>
+  <p><a class="btn ghost" href="https://github.com/SreeramMMenon/AksharaKunji/issues" target="_blank" rel="noopener" data-i18n="contributeCta">GitHub issue</a></p>
+</section>
+
+<footer class="wrap">
+  <p data-i18n="credits"></p>
+  <p class="inv" lang="sa" data-i18n="sanskritInvite">ये जनाः संस्कृतस्य महति प्रयोजने रुचिं वहन्ति, ते सम्पर्कं करोतु।</p>
+  <p><a href="https://github.com/SreeramMMenon/AksharaKunji" target="_blank" rel="noopener">github.com/SreeramMMenon/AksharaKunji</a></p>
+</footer>
+
+<script src="layouts-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
